@@ -1,10 +1,11 @@
 import React, { Component} from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
+import { createAppContainer, createStackNavigator } from "react-navigation";
 
 const aboutEmpoca = 'Erlebniscamps und Workshops für junge Menschen mit Rassismuserfahrungen'
 
 type Props = {};
-export default class App extends Component<Props> {
+class HomeScreen extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
@@ -15,6 +16,14 @@ export default class App extends Component<Props> {
     );
   }
 }
+
+const AppNavigator = createStackNavigator({
+  Home: {
+    screen: HomeScreen
+  }
+})
+
+export default createAppContainer(AppNavigator)
 
 const styles = StyleSheet.create({
   container: {
