@@ -1,10 +1,21 @@
+import { createBottomTabNavigator, createAppContainer } from "react-navigation";
 import HomeScreen from './components/HomeScreen.js';
-import { createAppContainer, createStackNavigator } from "react-navigation";
+import InfoScreen from './components/InfoScreen.js';
 
-const AppNavigator = createStackNavigator({
-  Home: {
-    screen: HomeScreen
+const TabNavigator = createBottomTabNavigator(
+  {
+    Home: HomeScreen,
+    Info: InfoScreen,
+  },
+  {
+    tabBarOptions: {
+      activeTintColor: '#1BD6D3',
+      labelStyle: {
+        fontSize: 18
+      },
+      inactiveTintColor: 'gray',
+    }
   }
-});
+);
 
-export default createAppContainer(AppNavigator);
+export default createAppContainer(TabNavigator);
