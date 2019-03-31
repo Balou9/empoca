@@ -1,3 +1,7 @@
+# custom
+hours.xlsx
+vid
+
 # OSX
 #
 .DS_Store
@@ -29,7 +33,6 @@ build/
 .gradle
 local.properties
 *.iml
-hours.xlsx
 
 # node.js
 #
