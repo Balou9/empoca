@@ -1,15 +1,11 @@
 import { createBottomTabNavigator, createAppContainer } from "react-navigation";
 import HomeScreen from './components/HomeScreen.js';
+import EventsScreen from './components/EventsScreen.js';
 import InfoScreen from './components/InfoScreen.js';
-
-import Amplify from 'aws-amplify';
-import amplify from './aws-exports';
-
-Amplify.configure(amplify);
-
 const TabNavigator = createBottomTabNavigator(
   {
     Home: HomeScreen,
+    Events: EventsScreen,
     Info: InfoScreen,
   },
   {
